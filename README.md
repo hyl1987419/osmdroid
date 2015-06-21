@@ -12,6 +12,8 @@ Before you add osmdroid to your project make sure you check the [Prerequisites](
 
 You can include osmdroid using Maven or by adding a jar file to your project. See [HowToIncludeInYourProject](https://code.google.com/p/osmdroid/wiki/HowToIncludeInYourProject).
 
+You may find it useful to read the [Javadoc](http://javadoc.osmdroid.org/).
+
 ##I want to compile the source
 
 The preferred method is by using Maven. See [HowToMaven](https://github.com/osmdroid/osmdroid/wiki/HowToMaven#how-to-build-osmdroid-using-eclipse).
@@ -38,7 +40,7 @@ Great! Osmdroid continues to improve from the contributions of its users. This c
 
 ##I want more!
 
-Maybe take a look at the fine [osmbonuspack project](https://code.google.com/p/osmbonuspack/) that acts as a companion to osmdroid and adds a lot of useful functionality. 
+Maybe take a look at the fine [osmbonuspack project](https://github.com/MKergall/osmbonuspack) that acts as a companion to osmdroid and adds a lot of useful functionality. 
 
 ##Screenshots
 

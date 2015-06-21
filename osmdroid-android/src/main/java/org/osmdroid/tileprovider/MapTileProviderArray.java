@@ -108,7 +108,7 @@ public class MapTileProviderArray extends MapTileProviderBase {
 					// Check again
 					alreadyInProgress = mWorking.containsKey(pTile);
 					if (alreadyInProgress) {
-						return null;
+						return tile;
 					}
 
 					mWorking.put(pTile, state);
@@ -198,7 +198,7 @@ public class MapTileProviderArray extends MapTileProviderBase {
 
 	@Override
 	public int getMinimumZoomLevel() {
-		int result = MAXIMUM_ZOOMLEVEL;
+		int result = microsoft.mappoint.TileSystem.getMaximumZoomLevel();
 		synchronized (mTileProviderList) {
 			for (final MapTileModuleProviderBase tileProvider : mTileProviderList) {
 				if (tileProvider.getMinimumZoomLevel() < result) {

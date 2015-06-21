@@ -9,7 +9,7 @@
 
     <groupId>org.osmdroid</groupId>
     <artifactId>osmdroid-parent</artifactId>
-    <version>4.3-SNAPSHOT</version>
+    <version>4.4-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>OSMdroid parent</name>
@@ -58,31 +58,31 @@
             <dependency>
                 <groupId>android</groupId>
                 <artifactId>android</artifactId>
-                <version>4.4.2_r3</version>
+                <version>4.4.2_r4</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>android.support</groupId>
                 <artifactId>compatibility-v4</artifactId>
-                <version>20.0.0</version>
+                <version>22.2.0</version>
             </dependency>
             <dependency>
                 <groupId>com.google.android.maps</groupId>
                 <artifactId>maps</artifactId>
-                <version>19_r7</version>
+                <version>21_r1</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>com.google.android.gms</groupId>
                 <artifactId>google-play-services</artifactId>
                 <type>apklib</type>
-                <version>19.0.0</version>
+                <version>25.0.0</version>
             </dependency>
             <dependency>
                 <groupId>com.google.android.gms</groupId>
                 <artifactId>google-play-services</artifactId>
                 <type>jar</type>
-                <version>19.0.0</version>
+                <version>25.0.0</version>
             </dependency>
             <dependency>
                 <groupId>commons-logging</groupId>
@@ -151,9 +151,9 @@
                     </configuration>
                 </plugin>
                 <plugin>
-                    <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                    <groupId>com.simpligility.maven.plugins</groupId>
                     <artifactId>android-maven-plugin</artifactId>
-                    <version>3.8.2</version>
+                    <version>4.2.1</version>
                     <configuration>
                         <sdk>
                             <platform>19</platform>
@@ -299,7 +299,7 @@
                     </plugin>
 
                     <plugin>
-                        <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                        <groupId>com.simpligility.maven.plugins</groupId>
                         <artifactId>android-maven-plugin</artifactId>
                         <inherited>true</inherited>
                         <executions>

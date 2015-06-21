@@ -16,8 +16,8 @@ import android.graphics.Rect;
  * A Projection serves to translate between the coordinate system of x/y on-screen pixel coordinates
  * and that of latitude/longitude points on the surface of the earth. You obtain a Projection from
  * MapView.getProjection(). You should not hold on to this object for more than one draw, since the
- * projection of the map could change. <br />
- * <br />
+ * projection of the map could change. <br>
+ * <br>
  * <b>Note:</b> This class will "wrap" all pixel and lat/long values that overflow their bounds
  * (rather than clamping to their bounds).
  * 
@@ -152,7 +152,7 @@ public class Projection implements IProjection, MapViewConstants {
 	 */
 	public Point toProjectedPixels(final int latituteE6, final int longitudeE6, final Point reuse) {
 		return TileSystem.LatLongToPixelXY(latituteE6 * 1E-6, longitudeE6 * 1E-6,
-				MAXIMUM_ZOOMLEVEL, reuse);
+				microsoft.mappoint.TileSystem.getMaximumZoomLevel(), reuse);
 	}
 
 	/**
@@ -168,7 +168,8 @@ public class Projection implements IProjection, MapViewConstants {
 	public Point toPixelsFromProjected(final Point in, final Point reuse) {
 		Point out = reuse != null ? reuse : new Point();
 
-		final int zoomDifference = MAXIMUM_ZOOMLEVEL - getZoomLevel();
+		final int zoomDifference = microsoft.mappoint.TileSystem.getMaximumZoomLevel()
+				- getZoomLevel();
 		out.set(in.x >> zoomDifference, in.y >> zoomDifference);
 
 		out = toPixelsFromMercator(out.x, out.y, out);
